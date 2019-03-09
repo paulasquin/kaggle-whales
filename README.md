@@ -10,7 +10,7 @@ This project is using basics dependencies for an AI implementation : Jupyter Not
 
 ## Project installation
 
-- Git the projecy
+- Git the project
 ```
 git clone https://github.com/paulasquin/kaggle-whales.git
 ```
@@ -18,12 +18,18 @@ git clone https://github.com/paulasquin/kaggle-whales.git
 ```
 cd kaggle-whales
 ```
+- Create the dataset folder
+```bash
+mkdir dataset
+```
 
-- Download the kaggle dataset you'll be able to find at this adress: https://www.kaggle.com/c/whale-categorization-playground/data
-- Unzip the files and put them under a `dataset` folder
-- Run the docker instance:
+- Download the kaggle dataset. 
+You'll be able to find it at this adress: https://www.kaggle.com/c/whale-categorization-playground/data
+- Unzip the files and put them under the `dataset` folder
+- Come back to the terminal and run the docker instance:
 ```bash
 sudo docker-compose up
 ```
-- Open the jupyter notebook in your browser: [http://localhost:8888/tree/work](http://localhost:8888/tree/work)
+- Open the jupyter notebook in your browser
+[http://localhost:8888/tree/work](http://localhost:8888/tree/work)
 
