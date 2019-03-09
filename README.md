@@ -19,7 +19,7 @@ git clone https://github.com/paulasquin/kaggle-whales.git
 cd kaggle-whales
 ```
 
-- Download the kaggle dataset you'll be able to find at this adress: https://www.kaggle.com/c/whale-categorization-playground
+- Download the kaggle dataset you'll be able to find at this adress: https://www.kaggle.com/c/whale-categorization-playground/data
 - Unzip the files and put them under a `dataset` folder
 - Run the docker instance:
 ```bash
