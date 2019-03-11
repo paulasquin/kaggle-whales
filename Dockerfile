@@ -1,6 +1,6 @@
 FROM jupyter/tensorflow-notebook
 
-RUN pip install pydot
+RUN pip install pydot opencv-python opencv-contrib-python
 
 USER root
 RUN apt-get update && \
