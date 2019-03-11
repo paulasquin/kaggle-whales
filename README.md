@@ -1,5 +1,5 @@
 # Kaggle Competition - Whales identification using spots on their tails.
-https://www.kaggle.com/c/whale-categorization-playground
+https://www.kaggle.com/c/humpback-whale-identification
 
 ## Abstract
 Since many years, whales are at threat due to continous exploitation and biodiversity changments. To study the impact of conveservation policies, scientific are studying whales population and behaviours through multiple techniques among the use of GPS beacons.  
@@ -24,7 +24,7 @@ mkdir dataset
 ```
 
 - Download the kaggle dataset. 
-You'll be able to find it at this adress: https://www.kaggle.com/c/whale-categorization-playground/data
+You'll be able to find it at this adress: https://www.kaggle.com/c/humpback-whale-identification/data
 - Unzip the files and put them under the `dataset` folder
 - Come back to the terminal and run the docker instance:
 ```bash
