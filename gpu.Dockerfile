@@ -21,8 +21,7 @@
 
 ARG UBUNTU_VERSION=16.04
 
-## DO: define architecture
-ARG ARCH=x86_64
+ARG ARCH=
 
 ## DO: set CUDA version
 ARG CUDA=9.0
