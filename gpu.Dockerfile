@@ -1,24 +1,3 @@
-# Copyright 2018 The TensorFlow Authors. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# ============================================================================
-#
-# THIS IS A GENERATED DOCKERFILE.
-#
-# This file was assembled from multiple pieces, whose use is documented
-# throughout. Please refer to the TensorFlow dockerfiles documentation
-# for more information.
-
 ARG UBUNTU_VERSION=16.04
 
 ARG ARCH=
@@ -97,9 +76,6 @@ ARG TF_PACKAGE=tensorflow-gpu
 ARG TF_PACKAGE_VERSION=
 RUN ${PIP} install ${TF_PACKAGE}${TF_PACKAGE_VERSION:+==${TF_PACKAGE_VERSION}}
 
-COPY bashrc /etc/bash.bashrc
-RUN chmod a+rwx /etc/bash.bashrc
-
 RUN ${PIP} install jupyter matplotlib
 RUN ${PIP} install jupyter_http_over_ws
 RUN jupyter serverextension enable --py jupyter_http_over_ws
@@ -118,9 +94,6 @@ WORKDIR /workspace
 EXPOSE 8888
 
 RUN ${PYTHON} -m ipykernel.kernelspec
-
-## DO: test gpu installation
-RUN ${PYTHON} -c 'import tensorflow as tf; tf.test.is_gpu_available() or exit(1)'
 
 CMD ["bash", "-c", "source /etc/bash.bashrc && jupyter notebook --notebook-dir=/workspace --ip 0.0.0.0 --no-browser --allow-root"]
 
