@@ -116,8 +116,5 @@ EXPOSE 8888
 
 RUN ${PYTHON} -m ipykernel.kernelspec
 
-## DO: test gpu installation
-RUN ${PYTHON} -c 'import tensorflow as tf; tf.test.is_gpu_available() or exit(1)'
-
-CMD ["bash", "-c", "source /etc/bash.bashrc && jupyter notebook --notebook-dir=/workspace --ip 0.0.0.0 --no-browser --allow-root"]
+CMD "bash", "-c", "source /etc/bash.bashrc && jupyter notebook --notebook-dir=/workspace --ip 0.0.0.0 --no-browser --allow-root"]
 
